@@ -1,0 +1,11 @@
+<div #visitedContainer
+     class="recently-visited-container"
+     mwlDraggable
+     (dragEnd)="onDragEnd($event)">
+  <h4>Son Gezilenler</h4>
+  <ul>
+    <li *ngFor="let link of visitedLinks">
+      <a [href]="link" target="_blank">{{ link }}</a>
+    </li>
+  </ul>
+</div>

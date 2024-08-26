@@ -1,0 +1,23 @@
+<div
+  *ngIf="message"
+  class="alert"
+  [ngClass]="{ 'alert-success': success, 'alert-error': !success }"
+>
+  {{ message }}
+</div>
+<div class="login-container">
+  <h2>RASTMOBILE</h2>
+  <form (ngSubmit)="login()">
+    <div class="input-container">
+      <label for="username">Kullanıcı Adı</label>
+      <input id="username" type="text" [(ngModel)]="loginRequest.username" name="username" required>
+    </div>
+    <div class="input-container">
+      <label for="password">Şifre</label>
+      <input id="password" type="password" [(ngModel)]="loginRequest.password" name="password" required>
+    </div>
+    <div class="button-container">
+      <button type="submit" class="submit-button">Giriş Yap</button>
+    </div>
+  </form>
+</div>
